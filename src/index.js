@@ -1,8 +1,4 @@
 import './style.scss';
-import fetchAllPokemons from './functions/fetchAllPokemons';
-import createHeaderComponent from './components/header';
-import createSearchBarIconForMobile from './components/searchBarIconForMobile';
+import firstPageLoad from './functions/firstPageLoad';
 
-fetchAllPokemons();
-createHeaderComponent();
-createSearchBarIconForMobile();
+firstPageLoad();
