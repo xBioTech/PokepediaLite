@@ -6,6 +6,7 @@ function attachSearchBarEventListenerForMobile() {
     const inputField = document.createElement('input');
     inputField.type = 'search';
     inputField.placeholder = 'Search for Pokemon';
+    inputField.classList.add('search-bar-mobile');
     searchBarDiv.appendChild(inputField);
   });
 }
