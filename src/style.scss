@@ -39,6 +39,43 @@ body{
             margin-top: 1em;
         }
     }
+    .menu-div{
+        background-color: white;
+        top: 0;
+        width: 55%;
+        height: 100vh;
+        position: fixed;
+        z-index: 1000;
+        animation-name: menu-div-sidebar;
+        animation-duration: 0.5s;
+        .menu-ul{
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            padding: 1em 1em;
+            cursor: pointer;
+            &:hover{
+                background-color: $header-color;
+                border: solid 2px black;
+            }
+        }
+        
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    @keyframes menu-div-sidebar{
+        0% {
+            left: -50%;
+        }
+
+        100%{
+            left: 0;
+        }
+    }
 }
 
 @media only screen and (min-width: 1200px){

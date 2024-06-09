@@ -1,3 +1,5 @@
+import renderHamburgerIconMenu from '../components/renderHamburgerIconMenu';
+
 function attachSearchBarEventListenerForMobile() {
   const searchBarDiv = document.querySelector('.searchbar-mobile');
   const searchBarIcon = document.querySelector('.magnifying-glass-icon');
@@ -10,4 +12,13 @@ function attachSearchBarEventListenerForMobile() {
     searchBarDiv.appendChild(inputField);
   });
 }
-export { attachSearchBarEventListenerForMobile };
+
+function attachHamburgerNavigationMenu() {
+  const hamburgerIcon = document.querySelector('.hamburger-icon');
+
+  hamburgerIcon.addEventListener('click', () => {
+    renderHamburgerIconMenu();
+  });
+}
+
+export { attachSearchBarEventListenerForMobile, attachHamburgerNavigationMenu };
