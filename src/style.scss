@@ -48,9 +48,16 @@ body{
         z-index: 1000;
         animation-name: menu-div-sidebar;
         animation-duration: 0.5s;
+        overflow: scroll;
+
         .menu-ul{
             display: flex;
             flex-direction: column;
+
+            .menu-div-headline{
+                padding: 1em 1em;
+                border-bottom: 1px solid black;
+            }
         }
         li{
             padding: 1em 1em;
