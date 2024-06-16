@@ -4,10 +4,12 @@ import createSearchBarIconForMobile from '../components/searchBarIconForMobile';
 import renderSearchBarDesktop from './renderSearchBarDesktop';
 import { attachSearchBarEventListenerForMobile, attachHamburgerNavigationMenu } from './eventHandlers';
 import createSearchBarDivForMobile from '../components/searchBarDivForMobile';
+import renderMainContent from '../components/mainContent';
 
-function firstPageLoad() {
+async function firstPageLoad() {
   createHeaderComponent();
-  fetchAllPokemons();
+  const apiDataAll = await fetchAllPokemons();
+  console.log(apiDataAll);
   attachHamburgerNavigationMenu();
   if (window.matchMedia('(max-width: 767px)').matches) {
     createSearchBarIconForMobile();
@@ -16,5 +18,6 @@ function firstPageLoad() {
   } else {
     renderSearchBarDesktop();
   }
+  renderMainContent(apiDataAll);
 }
 export default firstPageLoad;
